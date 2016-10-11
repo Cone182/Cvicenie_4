@@ -109,7 +109,7 @@ int main(void)
   adc_init();
   uint16_t AD_value;
 
-  /* uloha 1 */
+  /* uloha 2 */
   	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA, ENABLE);
 
   	GPIO_InitTypeDef gpioInitStruc;
