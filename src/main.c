@@ -35,7 +35,7 @@ void adc_init(void)
 	  GPIO_InitTypeDef GPIO_InitStructure;
 	  ADC_InitTypeDef ADC_InitStructure;
 	  /* Enable GPIO clock */
-	  RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA, ENABLE);//Opravi a upravi
+	  RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA, ENABLE);
 	  /* Configure ADCx Channel 2 as analog input */
 	  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 ;
 	  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AN;
@@ -106,9 +106,6 @@ int main(void)
 
   /* TODO - Add your application code here */
 
-
-
-
   adc_init();
   uint16_t AD_value;
 
@@ -124,7 +121,6 @@ int main(void)
 
   	GPIO_Init(GPIOA, &gpioInitStruc);
 
-  	int temp=0;
 
   /* Infinite loop */
   while (1)
@@ -164,9 +160,6 @@ int main(void)
 	  else if ((AD_value>3925) && (AD_value<3965)){
 	  		  GPIO_ResetBits(GPIOA, GPIO_Pin_5);
 	  	  }
-
-
-
   }
   return 0;
 }
